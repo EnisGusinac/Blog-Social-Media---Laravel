@@ -28,6 +28,6 @@ class HomeController extends Controller
 
     public function blog()
     {
-        return view('layouts.blog');
+        return view( 'layouts.main');
     }
 }
