@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/profile/{username}', 'ProfileController@index');
+Route::get('/profile/{username}', 'ProfileController@profile');
 
 Route::get('/blog', 'HomeController@blog');
 

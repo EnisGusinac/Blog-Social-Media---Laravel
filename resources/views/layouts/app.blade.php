@@ -53,7 +53,8 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="{{ route('/profile/{ $user->username }') }}">Profile</a>
+                                        {{--<a href="{{ route('/profile/{$username}') }}">Profile</a>--}}
+                                        <a href="#">Profile</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('logout') }}"
@@ -63,7 +64,7 @@
 
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
+                                            {{ csrf_fild() }}
                                         </form>
                                     </li>
                                 </ul>
