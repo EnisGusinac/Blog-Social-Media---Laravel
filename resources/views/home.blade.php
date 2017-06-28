@@ -31,7 +31,7 @@
             </div>
         </div>
         <a href="" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-            <img src="w3images/avatar2.png" class="w3-circle" style="height:25px;width:25px" alt="Avatar">
+            <img src="uploads/w3images/avatar2.png" class="w3-circle" style="height:25px;width:25px" alt="Avatar">
         </a>
     </div>
 </div>
@@ -54,7 +54,7 @@
             <div class="w3-card-2 w3-round w3-white">
                 <div class="w3-container">
                     <h4 class="w3-center">My Profile</h4>
-                    <p class="w3-center"><img src="/w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                    <p class="w3-center"><img src="w3images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
                     <hr>
                     <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
                     <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
@@ -80,22 +80,22 @@
                         <div class="w3-row-padding">
                             <br>
                             <div class="w3-half">
-                                <img src="/w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
+                                <img src="w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
                             </div>
                             <div class="w3-half">
-                                <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                                <img src="w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
                             </div>
                             <div class="w3-half">
-                                <img src="/w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
+                                <img src="w3images/mountains.jpg" style="width:100%" class="w3-margin-bottom">
                             </div>
                             <div class="w3-half">
-                                <img src="/w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
+                                <img src="w3images/forest.jpg" style="width:100%" class="w3-margin-bottom">
                             </div>
                             <div class="w3-half">
-                                <img src="/w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
+                                <img src="w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
                             </div>
                             <div class="w3-half">
-                                <img src="/w3images/fjords.jpg" style="width:100%" class="w3-margin-bottom">
+                                <img src="w3images/fjords.jpg" style="width:100%" class="w3-margin-bottom">
                             </div>
                         </div>
                     </div>
