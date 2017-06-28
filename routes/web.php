@@ -15,13 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/profile', 'UserController@profile');
+Route::post('profile', 'UserController@update_avatar');
+
+
+Route::get('/profile/{username}', 'ProfileController@profile');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('profile', 'UserController@profile');
-
-
-Route::get('/profile/{username}', 'ProfileController@profile');
 
 
