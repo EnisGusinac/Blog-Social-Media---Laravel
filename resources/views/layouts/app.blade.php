@@ -1,5 +1,18 @@
 
-@extends('layouts.header')
+<!DOCTYPE html>
+<html lang="{{ app()->getLocale() }}">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSRF Token -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+<!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+</head>
+
 
 <body>
     <div id="app">
@@ -56,10 +69,10 @@
                                     </li>
                                     <hr>
                                     <li>
-                                        <a href="/articles/create"> Create Article</a>
+                                        <a href="/home"> Home </a>
                                     </li>
                                     <li>
-                                        <a href="/articles"> Read Articles</a>
+                                        <a href="/posts"> Read Articles</a>
                                     </li>
 
                                     <hr>
