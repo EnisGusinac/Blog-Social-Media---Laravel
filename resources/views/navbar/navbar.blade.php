@@ -17,10 +17,10 @@
                 <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
             </div>
         </div>
-        {{--<a href="/profile/{username}" class="nav navbar-nav navbar-right w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">--}}
-        {{--<img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:25px;width:25px" alt="Avatar">--}}
+        <a href="/profile/{username}" class="nav navbar-nav navbar-right w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
+        <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:25px;width:25px" alt="Avatar">
 
-        @include('navbar.rightProfileDropdown')
+        {{--@include('navbar.rightProfileDropdown')--}}
 
     </div>
 </div>

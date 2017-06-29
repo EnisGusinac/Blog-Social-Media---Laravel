@@ -24,7 +24,7 @@
                         <h5>Joined: {{ $user->created_at->format('l j F Y') }} </h5>
                         <h5>Last update: {{ $user->updated_at->format('g:ia \o\n l jS F Y') }} </h5>
 
-                        <form enctype="multipart/form-data" action="/profile" method="POST" >
+                        <form enctype="multipart/form-data" action="/profile/{{ $user->name }}" method="POST" >
                             <label for="">Update Profile Image</label>
                             <input type="file" name="avatar">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
