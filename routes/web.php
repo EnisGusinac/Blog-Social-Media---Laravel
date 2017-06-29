@@ -16,16 +16,15 @@ Route::get('/', function () {
 });
 
 
-Route::get('/profile', 'UserController@profile');
-Route::post('profile', 'UserController@update_avatar');
-
-
-Route::get('/profile/{username}', 'ProfileController@profile');
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('/profile', 'ProfileController@profileRoute');
+Route::post('profile', 'ProfileController@update_avatar');
+
+Route::get('/profile/{username}', 'ProfileController@profile');
+
+Route::resource('posts', 'PostsController');
 
 
