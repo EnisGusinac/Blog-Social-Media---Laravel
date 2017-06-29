@@ -16,12 +16,13 @@
                 <a href="#" class="w3-bar-item w3-button">John Doe posted on your wall</a>
                 <a href="#" class="w3-bar-item w3-button">Jane likes your post</a>
             </div>
+
         </div>
-        <a href="/profile/{username}" class="nav navbar-nav navbar-right w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-        <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:25px;width:25px" alt="Avatar">
-
+        <div class="nav navbar-nav navbar-right">
+        <a href="/profile/{username}" class=" w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover" title="Visit Your Account">
+        <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:25px;width:25px" alt="Avatar">{{$user->name}}
         {{--@include('navbar.rightProfileDropdown')--}}
-
+        </div>
     </div>
 </div>
 
