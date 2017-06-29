@@ -1,9 +1,10 @@
 
 
 <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
-    <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-    <span class="w3-right w3-opacity">1 min</span>
-    <h4>John Doe</h4><br>
+    <img src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+         style="width:60px">
+    <span class="w3-right w3-opacity">{{ $user->created_at->format('l j F Y') }}</span>
+    <h4>{{ $user->name }}</h4><br>
     <hr class="w3-clear">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="w3-row-padding" style="margin:0 -16px">
