@@ -22,3 +22,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Post::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'user_id' => App\User::all()->random()->id,
+        'content' => $faker->paragraph(5),
+        'post_on' => Carbon\Carbon::parse('+1 week'),
+    ];
+});
+

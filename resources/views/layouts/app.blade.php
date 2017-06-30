@@ -72,7 +72,7 @@
                                         <a href="/home"> Home </a>
                                     </li>
                                     <li>
-                                        <a href="/posts"> Read Articles</a>
+                                        <a href="/posts"> Read Posts</a>
                                     </li>
 
                                     <hr>

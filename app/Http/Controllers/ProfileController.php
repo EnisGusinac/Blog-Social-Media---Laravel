@@ -24,7 +24,7 @@ class ProfileController extends Controller
 
     public function profileRoute()
     {
-        return view('auth.login');
+        return view('user.profile');
     }
 
     public function update_avatar(Request $request)
