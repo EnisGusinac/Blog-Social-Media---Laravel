@@ -12,9 +12,10 @@
 
                     <span class="w3-right w3-opacity">{{ $user->created_at->format('l j F Y') }}</span>
                     <h6 class="w3-opacity">Create your post:</h6>
-                    <textarea name="content" cols="85" rows="3">
-
-                    </textarea>
+                    {{--<textarea resize="none" name="content" cols="82" rows="2" class="w3-border w3-padding-small">--}}
+                    {{--</textarea>--}}
+                    
+                    <input style="width: 100%; height: 10%;" name="content" class="w3-border w3-padding-small">
                 <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button>
                 </form>
             </div>

@@ -23,6 +23,10 @@
     <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
 </div>
 
+@empty
+    <p>{{ $user->name }}, no Posts found. Create your new Post for Today! </p>
+@endforelse
+
 <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
     <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
     <span class="w3-right w3-opacity">{{ $user->created_at->format('l j F Y') }}</span>
@@ -63,6 +67,3 @@
     <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
 </div>
 
-@empty
-    No Posts found!
-@endforelse
