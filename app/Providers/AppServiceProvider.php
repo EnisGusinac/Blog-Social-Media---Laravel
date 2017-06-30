@@ -17,14 +17,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
         Schema::defaultStringLength(191);
-        
+
+        //Share 'user' with all views
         View::composer('*', function ($view){
             $view->with('user', Auth::user());
         });
 
-
+        //Share 'posts' with all views
         View::composer('*', function ($view){
             $view->with('posts', DB::table('posts')->get());
         });
