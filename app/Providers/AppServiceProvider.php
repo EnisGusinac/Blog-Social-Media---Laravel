@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Schema;
 use View;
 use Auth;
 use DB;
+use App\Post;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
 
         //Share 'posts' with all views
         View::composer('*', function ($view){
-            $view->with('posts', DB::table('posts')->get());
+            $view->with('posts', Post::all());
         });
     }
 

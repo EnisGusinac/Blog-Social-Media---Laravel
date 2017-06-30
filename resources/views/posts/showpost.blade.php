@@ -1,4 +1,4 @@
-
+@include('navbar.navbar')
 
 <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
     <img src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle w3-margin-right"

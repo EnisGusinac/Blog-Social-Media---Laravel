@@ -15,7 +15,7 @@
                     <textarea name="content" cols="85" rows="3">
 
                     </textarea>
-                <button type="submit" for="post_on" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button>
+                <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button>
                 </form>
             </div>
         </div>
