@@ -16,7 +16,7 @@
                                     <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
                                     <span class="w3-right w3-opacity">{{ $user->created_at->format('l j F Y') }}</span>
-                                    <h6 class="w3-opacity">Create your posts:</h6>
+                                    <h6 class="w3-opacity">Create your post:</h6>
                                     <textarea name="content" cols="90" rows="3">
 
 

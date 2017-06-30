@@ -105,7 +105,7 @@
 
             @include('posts.createpost')
 
-            @include('posts.showpost')
+            @include('posts.index')
 
             <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
                 <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
@@ -147,6 +147,13 @@
                 <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
                 <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
             </div>
+
+            {{--//Pagination--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-md-4 col-md-offset-4">--}}
+                    {{--{{ $posts->links() }}--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
             <!-- End Middle Column -->
         </div>
