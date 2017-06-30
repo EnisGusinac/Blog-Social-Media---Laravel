@@ -102,7 +102,6 @@
         <!-- Middle Column -->
         <div class="w3-col m7">
 
-
             @include('posts.createpost')
 
             @include('posts.index')

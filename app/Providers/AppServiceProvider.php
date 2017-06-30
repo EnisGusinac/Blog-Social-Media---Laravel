@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use View;
 use Auth;
+use DB;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
         
         View::composer('*', function ($view){
             $view->with('user', Auth::user());
+        });
+
+
+        View::composer('*', function ($view){
+            $view->with('posts', DB::table('posts')->get());
         });
     }
 
