@@ -27,7 +27,7 @@ class AppServiceProvider extends ServiceProvider
 
         //Share 'posts' with all views
         View::composer('*', function ($view){
-            $view->with('posts', Post::all());
+            $view->with('posts', Post::latest()->paginate(10));
         });
     }
 
