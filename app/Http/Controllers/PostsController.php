@@ -21,6 +21,10 @@ class PostsController extends Controller
     {
         return view('posts.createpost');
     }
+    public function image()
+    {
+
+    }
     public function upload_image()
     {
 

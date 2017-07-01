@@ -12,6 +12,10 @@ Route::get('/profile', 'ProfileController@profileRoute');
 Route::post('profile', 'ProfileController@update_avatar');
 Route::get('/profile/{username}', 'ProfileController@profile');
 
+
+Route::get('posts', 'PostsController@image');
+Route::post('posts', 'PostsController@update_image');
+
 Route::resource('posts', 'PostsController');
 
 

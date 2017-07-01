@@ -19,9 +19,11 @@
                 <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button>
 
                     <form enctype="multipart/form-data" action="/posts" method="POST">
-                    <button type="file" name="image" class="w3-button w3-theme"><i class="fa fa-image"></i> &nbsp;Upload image</button>
+                        <input type="file" name="image">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    </form>
+
+                    <button type="submit" name="image" class="w3-button w3-theme"><i class="fa fa-image"></i> &nbsp;Upload image</button>
+                </form>
             </div>
         </div>
     </div>
