@@ -19,8 +19,8 @@
 
         </div>
         <div class="nav navbar-nav navbar-right">
-        <a href="/profile/{username}" class=" w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover" title="Visit Your Account">
-        <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:25px;width:25px" alt="Avatar">{{$user->name}}
+        <a href="/profile/{username}" class=" w3-bar-item w3-button w3-hide-small w3-right w3-padding-medium w3-hover" title="Visit Your Account">
+        <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:30px;width:30px">{{$user->name}}
         {{--@include('navbar.rightProfileDropdown')--}}
         </div>
     </div>

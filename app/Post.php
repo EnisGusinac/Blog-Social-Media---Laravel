@@ -12,4 +12,9 @@ class Post extends Model
 
    // protected $guarded = ['id'];
 
+    public function getShortContentAttribute()
+    {
+        return substr($this->content, 0, 300) . "...";
+    }
+
 }

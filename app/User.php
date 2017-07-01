@@ -29,6 +29,6 @@ class User extends Authenticatable
 
     // For natural function of dob
     protected $dates = [
-        'dob'
+        'dob', 'post_on'
     ];
 }

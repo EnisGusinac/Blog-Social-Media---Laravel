@@ -25,7 +25,7 @@ class PostsController extends Controller
     {
         Post::create($request->all());
 
-        return redirect('posts');
+        return redirect('home');
 //        Post::create([
 //        'user_id' => Auth::user()->id,
 //        'content' => $request->content,
@@ -35,7 +35,14 @@ class PostsController extends Controller
 
     public function show($id)
     {
+        $post = Post::findOrFail($id);
+        return view('posts.showpost', compact('post'));
+    }
 
+    public function edit($id)
+    {
+        $post = Post::findOrFail($id);
+        return view('posts.editpost', compact('post'));
     }
 
 
