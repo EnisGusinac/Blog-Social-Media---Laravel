@@ -108,11 +108,11 @@
 
 
             {{--//Pagination--}}
-            {{--<div class="row">--}}
-            {{--<div class="col-md-4 col-md-offset-4">--}}
-            {{--{{ $posts->links() }}--}}
-            {{--</div>--}}
-            {{--</div>--}}
+            <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+            {{ $posts->links() }}
+            </div>
+            </div>
 
 
             <!-- End Middle Column -->
