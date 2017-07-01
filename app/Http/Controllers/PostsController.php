@@ -45,6 +45,12 @@ class PostsController extends Controller
         return view('posts.editpost', compact('post'));
     }
 
+    public function destroy($id)
+    {
+        Post::destroy($id);
+
+        return redirect('/home')
+    }
 
 
 }

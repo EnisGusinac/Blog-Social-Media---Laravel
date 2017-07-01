@@ -4,9 +4,27 @@
 @forelse($posts as $post)
 <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
 
-<img  src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle w3-margin-right"
+
+    @if($post->user_id == Auth::id())
+        <form action="/home/{{ $post->id }}" method="POST"
+              class="pull-right" style="margin-left: 25px">
+
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+
+            <button class="btn btn-xs">
+                Edit post
+            </button>
+            <button class="btn btn-xs" onclick="return confirm('Are you sure you want to delete this post?');">
+                Delete post
+            </button>
+        </form>
+    @endif
+
+    <img  src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle w3-margin-right"
      style="width:60px">
     <span class="w3-right w3-opacity">{{ $user->created_at->format('l j F Y') }}</span>
+
     <h4>{{ $user->name }}</h4><br>
     <hr class="w3-clear">
 
@@ -24,6 +42,7 @@
     </div>
     <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
     <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
+
 </div>
 
 @empty
