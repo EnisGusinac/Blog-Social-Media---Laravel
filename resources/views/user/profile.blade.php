@@ -17,14 +17,14 @@
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}" alt="">
+                        <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}">
                         <h2>{{ $user->name }}'s Profile</h2>
                         <h5>Email: {{ $user->email }}</h5>
                         <h5>Birthdate: {{ $user->dob->format('l j F Y') }} ({{$user->dob->age }} years old)</h5>
                         <h5>Joined: {{ $user->created_at->format('l j F Y') }} </h5>
                         <h5>Last update: {{ $user->updated_at->format('g:ia \o\n l jS F Y') }} </h5>
 
-                        <form enctype="multipart/form-data" action="/profile" method="GET" >
+                        <form enctype="multipart/form-data" action="/profile" method="POST">
                             <label for="">Update Profile Image</label>
                             <input type="file" name="avatar">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">

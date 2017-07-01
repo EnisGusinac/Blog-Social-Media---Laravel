@@ -34,7 +34,7 @@
 
     <div class="w3-row-padding" style="margin:0 -16px">
         <div class="w3-half">
-            <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
+            <img src="/uploads/images/{{ $user->avatar }}" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
         </div>
         <div class="w3-half">
             <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">

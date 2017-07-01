@@ -17,7 +17,11 @@
 
                     <input style="width: 100%; height: 10%;" name="content" class="w3-border w3-padding-small">
                 <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button>
-                </form>
+
+                    <form enctype="multipart/form-data" action="/posts" method="POST">
+                    <button type="file" name="image" class="w3-button w3-theme"><i class="fa fa-image"></i> &nbsp;Upload image</button>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    </form>
             </div>
         </div>
     </div>

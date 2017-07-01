@@ -6,6 +6,7 @@ use function foo\func;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use Image;
 
 class ProfileController extends Controller
 {
@@ -19,7 +20,6 @@ class ProfileController extends Controller
         //Will get the username from the URL
         $user = User::whereUsername($username)->first();
         return view('user.profile', compact('user'));
-
     }
 
     public function profileRoute()
@@ -35,7 +35,7 @@ class ProfileController extends Controller
         {
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save(public_path('/uploads/avatars/' . $filename));
+            Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename));
 
             // get the currently logged in user
             $user = Auth::user();

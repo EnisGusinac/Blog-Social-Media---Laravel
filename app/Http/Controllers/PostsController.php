@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use Auth;
 use DB;
+use Image;
 
 
 class PostsController extends Controller
@@ -19,6 +20,10 @@ class PostsController extends Controller
     public function create()
     {
         return view('posts.createpost');
+    }
+    public function upload_image()
+    {
+
     }
 
     public function store(Request $request)
@@ -49,7 +54,7 @@ class PostsController extends Controller
     {
         Post::destroy($id);
 
-        return redirect('/home')
+        return redirect('/home');
     }
 
 
