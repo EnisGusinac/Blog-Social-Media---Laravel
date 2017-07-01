@@ -19,7 +19,7 @@ class PostsController extends Controller
 
     public function create()
     {
-        return view('posts.createpost');
+//        return view('posts.createpost');
     }
     public function image()
     {

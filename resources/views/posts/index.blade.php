@@ -6,7 +6,7 @@
 
 
     @if($post->user_id == Auth::id())
-        <form action="/home/{{ $post->id }}" method="POST"
+        <form action="/posts/{{ $post->id }}" method="POST"
               class="pull-right" style="margin-left: 25px">
 
             {{ csrf_field() }}
@@ -32,14 +32,14 @@
         <a href="/posts/{{ $post->id }}"> Read more</a></p>
 
 
-    <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half">
-            <img src="/uploads/images/{{ $user->avatar }}" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">
-        </div>
-        <div class="w3-half">
-            <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">
-        </div>
-    </div>
+    {{--<div class="w3-row-padding" style="margin:0 -16px">--}}
+        {{--<div class="w3-half">--}}
+            {{--<img src="/uploads/images/{{ $user->image }}" style="width:100%" alt="Northern Lights" class="w3-margin-bottom">--}}
+        {{--</div>--}}
+        {{--<div class="w3-half">--}}
+            {{--<img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
     <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
 
