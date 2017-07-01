@@ -13,13 +13,13 @@ class PostsController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(10);
+        //$posts = Post::latest()->paginate(10);
         return view('posts.index', compact('posts'));
     }
 
     public function create()
     {
-//        return view('posts.createpost');
+        return view('posts.createpost');
     }
     public function image()
     {
@@ -61,5 +61,15 @@ class PostsController extends Controller
         return redirect('/home');
     }
 
+    public function likePost($postId, Request $request) {
 
+        $postToLike = Post::find($postId);
+        $postToLike->likes++;
+        $postToLike->save();
+
+        return response()->json([
+            'numberOfNewLikes' => $postToLike->likes,
+            'result' => sprintf("You liked this post [%d] with title [%s] did'nt you?", $postId, $postToLike->content),
+        ]);
+    }
 }

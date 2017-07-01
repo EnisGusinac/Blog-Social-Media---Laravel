@@ -40,7 +40,7 @@
             {{--<img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="w3-margin-bottom">--}}
         {{--</div>--}}
     {{--</div>--}}
-    <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
+    <button type="button" data-postid="{{ $post->id }}" data-likeurl="{{ route('posts.like', ['post' => $post->id]) }}" class="like-button w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like (<span class="post-{{ $post->id }}-likes">{{$post->likes}}</span>)</button>
     <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
 
 </div>

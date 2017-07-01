@@ -17,6 +17,7 @@ Route::get('/profile/{username}', 'ProfileController@profile');
 //Route::post('posts', 'PostsController@update_image');
 
 Route::resource('posts', 'PostsController');
+Route::post('posts/like/{post}', 'PostsController@likePost')->name('posts.like');
 
 
 
