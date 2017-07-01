@@ -54,6 +54,13 @@ class PostsController extends Controller
         return view('posts.editpost', compact('post'));
     }
 
+    public function update($postId, Request $request) {
+        $post = Post::findOrFail($postId);
+        $post->content = $request->input('content');
+        $post->save();
+        return redirect('/home');
+    }
+
     public function destroy($id)
     {
         Post::destroy($id);
