@@ -19,9 +19,6 @@ Route::get('/profile/{username}', 'ProfileController@profile');
 Route::resource('posts', 'PostsController');
 Route::post('posts/like/{post}', 'PostsController@likePost')->name('posts.like');
 
-
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

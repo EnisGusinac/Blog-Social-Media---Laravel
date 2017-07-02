@@ -76,7 +76,7 @@
                         <span class="w3-tag w3-small w3-theme-d3">Labels</span>
                         <span class="w3-tag w3-small w3-theme-d2">Games</span>
                         <span class="w3-tag w3-small w3-theme-d1">Friends</span>
-                        <span class="w3-tag w3-small w3-theme">Games</span>
+                        <span href="http://www.friv-2017.com/" class="w3-tag w3-small w3-theme">Games</span>
                         <span class="w3-tag w3-small w3-theme-l1">Friends</span>
                         <span class="w3-tag w3-small w3-theme-l2">Food</span>
                         <span class="w3-tag w3-small w3-theme-l3">Design</span>
@@ -108,7 +108,7 @@
 
 
             {{--//Pagination--}}
-            <div class="row">
+            <div class="pagination">
             <div class="col-md-4 col-md-offset-4">
             {{ $posts->links() }}
             </div>
@@ -120,7 +120,7 @@
 
         <!-- Right Column -->
         <div class="w3-col m2">
-            <div class="w3-card-2 w3-round w3-white w3-center">
+            <div class="w3-card-2 w3-round w3-white w3-center w3-hover-yellow">
                 <div class="w3-container">
                     <p>Upcoming Events:</p>
                     <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
@@ -148,8 +148,11 @@
             </div>
             <br>
 
-            <div class="w3-card-2 w3-round w3-white w3-padding-16 w3-center">
-                <p>ADS</p>
+            <div class="w3-card-2 w3-round w3-white w3-padding-16 w3-center w3-hover-yellow">
+                <a href="http://www.friv-2017.com/" title="Play Friv games">
+                    <img src="http://m.juegosfriv2017.net/games/images/Tomb-Runner.png">
+                </a>
+                <br> Wanna play some Games? Friv is awesome!!
             </div>
             <br>
 
