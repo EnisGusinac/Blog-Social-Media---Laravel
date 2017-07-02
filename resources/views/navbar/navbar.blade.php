@@ -22,7 +22,6 @@
             </div>
         </div>
 
-
             <div class="nav navbar-nav navbar-right w3-dropdown-hover w3-right">
                 <button class="w3-button">
                     <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:30px;width:30px">
