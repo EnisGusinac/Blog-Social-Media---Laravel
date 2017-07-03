@@ -16,8 +16,8 @@
                     <p class="w3-center"><img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle"
                                               style="height:150px;width:150px" alt="Avatar"></p>
                     <hr>
-                    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
-                    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
+                    <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Web Developer, Service2fruit.com </p>
+                    <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Nijmegen, Nederlands</p>
                     <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
                         {{ $user->dob->format('j F Y') }} ({{ $user->dob->age }} years old)</p>
 {{--                    {{ csrf_field() }}--}}
@@ -140,8 +140,8 @@
             <div class="w3-card-2 w3-round w3-white w3-center">
                 <div class="w3-container">
                     <p>Friend Request</p>
-                    <img src="/uploads/avatars/nuro.jpg" alt="Avatar" style="width:80%"><br>
-                    <span>Nuradin Dedeic</span>
+                    <img src="/uploads/avatars/adis.jpg" alt="Avatar" style="width:80%"><br>
+                    <span>Adis Corovic</span>
                     <div class="w3-row w3-opacity">
 
                         <div class="w3-half">

@@ -1,16 +1,13 @@
 
-@extends('navbar.navbar')
-{{--@extends('layouts.app')--}}
+@include('navbar.navbar')
 
 <div class="w3-card-4">
-    <header class="w3-container w3-light-grey">
-        <h3>{{ $user->name }}</h3>
+
+    <header class="w3-container w3-blue">
+        <h1>{{ $user->name }}</h1>
     </header>
 
     <div class="w3-container">
-        <p>1 new friend request</p>
-        <hr>
-
         <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle">
         <h2>{{ $user->name }}'s Profile</h2>
         <h5>Email: {{ $user->email }}</h5>
@@ -26,11 +23,12 @@
         </form>
     </div>
 
-    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+    <footer class="w3-container w3-blue">
+
+        {{--<button class="w3-button w3-block w3-dark-grey">+ Connect</button>--}}
+    </footer>
 
 </div>
-
-
 
 
 
@@ -70,4 +68,3 @@
         {{--</div>--}}
     {{--</div>--}}
 {{--@endsection--}}
-

@@ -16,9 +16,16 @@ Route::post('profile', 'ProfileController@update_avatar');
 //Route::get('posts', 'PostsController@image');
 //Route::post('posts', 'PostsController@update_image');
 
-Route::resource('posts', 'PostsController');
+
+
 Route::post('posts/like/{post}', 'PostsController@likePost')->name('posts.like');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::resource('posts', 'PostsController');
+
+Route::get('posts/{post}', 'PostsController@show')->name('posts.show');
+Route::get('posts/{post}/edit', 'PostsController@edit')->name('posts.edit');
