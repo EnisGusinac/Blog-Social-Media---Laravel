@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 Route::get('/profile', 'ProfileController@profileRoute');
 Route::post('profile', 'ProfileController@update_avatar');
-Route::get('/profile/{username}', 'ProfileController@profile');
+// Route::get('/profile/{username}', 'ProfileController@profile');
 
 //
 //Route::get('posts', 'PostsController@image');
@@ -22,5 +22,3 @@ Route::post('posts/like/{post}', 'PostsController@likePost')->name('posts.like')
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-
-

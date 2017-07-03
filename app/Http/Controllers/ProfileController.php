@@ -15,12 +15,12 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
-    public function profile($username)
-    {
-        //Will get the username from the URL
-        $user = User::whereUsername($username)->first();
-        return view('user.profile', compact('user'));
-    }
+    // public function profile($username)
+    // {
+    //     //Will get the username from the URL
+    //     $user = User::whereUsername($username)->first();
+    //     return view('user.profile', compact('user'));
+    // }
 
     public function profileRoute()
     {

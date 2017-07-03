@@ -29,7 +29,7 @@
 
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
 
-                    <a href="/profile/{username}" class=" w3-bar-item w3-button" title="Visit Your Account">
+                    <a href="/profile" class=" w3-bar-item w3-button" title="Visit Your Account">
 
                         <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}"
                              style="width: 70px; height: 70px; position: relative; left: 10px; border-radius: 100%; "><br><br>
