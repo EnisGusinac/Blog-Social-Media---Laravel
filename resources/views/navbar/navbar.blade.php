@@ -24,7 +24,7 @@
 
             <div class="nav navbar-nav navbar-right w3-dropdown-hover w3-right">
                 <button class="w3-button">
-                    <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:30px;width:30px">
+                    <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:30px; width:30px">
                     {{ $user->name }}</button>
 
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -33,19 +33,19 @@
 
                         <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}"
                              style="width: 70px; height: 70px; position: relative; left: 10px; border-radius: 100%; "><br><br>
-                        <i class="fa fa-profile">
+                        <i class="fa fa-address-card">
                             My Profile
                         </i>
                         </a>
                     <hr>
 
-                    <a href="/posts" class="w3-bar-item w3-button"><i class="fa fa-post">My Posts</i></a>
-                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-profile">Account Settings</i></a>
+                    <a href="/posts" class="w3-bar-item w3-button"><i class="fa fa-pencil"> My Posts</i></a>
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"> My Account</i></a>
                     <hr>
 
                     <a href="{{ route('logout') }}"  class="w3-bar-item w3-button"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        <i class="fa fa-logout">
+                        <i class="fa fa-sign-out">
                             Logout
                         </i>
                     </a>

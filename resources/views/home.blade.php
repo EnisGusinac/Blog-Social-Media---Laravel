@@ -1,6 +1,4 @@
 
-<body class="w3-theme-l5">
-
 <!-- Navbar -->
 @include('navbar.navbar')
 
@@ -16,7 +14,7 @@
                 <div class="w3-container">
                     <h4 class="w3-center"> {{ $user->name }} </h4>
                     <p class="w3-center"><img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle"
-                                              style="height:136px;width:136px" alt="Avatar"></p>
+                                              style="height:150px;width:150px" alt="Avatar"></p>
                     <hr>
                     <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
                     <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> London, UK</p>
@@ -107,15 +105,24 @@
             @include('posts.index')
 
 
+
+                    {{--//Pagination--}}
+            <div class="w3-clear nextprev">
+          <a class="w3-left w3-btn" href="w3css_colors.asp">❮ Previous</a>
+          <a class="w3-right w3-btn" href="w3css_panels.asp">Next ❯</a>
+            {{ $posts->links() }}
+          </div>
+
             {{--//Pagination--}}
-            <div class="pagination">
+            <!-- <div class="w3-pagination">
             <div class="col-md-4 col-md-offset-4">
             {{ $posts->links() }}
             </div>
-            </div>
+            </div> -->
 
             <!-- End Middle Column -->
         </div>
+
 
         <!-- Right Column -->
         <div class="w3-col m2">
@@ -133,21 +140,22 @@
             <div class="w3-card-2 w3-round w3-white w3-center">
                 <div class="w3-container">
                     <p>Friend Request</p>
-                    <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+                    <img src="/uploads/avatars/0701e7d.jpg" alt="Avatar" style="width:80%"><br>
                     <span>Jane Doe</span>
                     <div class="w3-row w3-opacity">
+
                         <div class="w3-half">
-                            <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i></button>
+                            <button class="w3-button w3-block w3-green w3-section" title="Accept"><i class="fa fa-check"></i> Accept</button>
                         </div>
                         <div class="w3-half">
-                            <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i></button>
+                            <button class="w3-button w3-block w3-red w3-section" title="Decline"><i class="fa fa-remove"></i> Decline</button>
                         </div>
                     </div>
                 </div>
             </div>
             <br>
 
-            <div class="w3-card-2 w3-round w3-white w3-padding-16 w3-center w3-hover-yellow">
+            <div class="w3-card-2 w3-round w3-blue w3-padding-16 w3-center w3-hover-yellow">
                 <a href="http://www.friv-2017.com/" title="Play Friv games">
                     <img src="http://m.juegosfriv2017.net/games/images/Tomb-Runner.png">
                 </a>
