@@ -33,17 +33,21 @@
 
                         <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}"
                              style="width: 70px; height: 70px; position: relative; left: 10px; border-radius: 100%; "><br><br>
-                        Visit Your Profile
+                        <i class="fa fa-profile">
+                            My Profile
+                        </i>
                         </a>
                     <hr>
 
-                    <a href="/posts" class="w3-bar-item w3-button">My Posts</a>
-                    <a href="#" class="w3-bar-item w3-button">Account Settings</a>
+                    <a href="/posts" class="w3-bar-item w3-button"><i class="fa fa-post">My Posts</i></a>
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-profile">Account Settings</i></a>
                     <hr>
 
                     <a href="{{ route('logout') }}"  class="w3-bar-item w3-button"
                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Logout
+                        <i class="fa fa-logout">
+                            Logout
+                        </i>
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         {{ csrf_field() }}
