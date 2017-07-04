@@ -1,4 +1,4 @@
-@include('navbar.navbar')
+@include('layouts.header')
 
 <div class="w3-row-padding">
     <div class="w3-col m12">

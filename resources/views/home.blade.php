@@ -116,7 +116,7 @@
             {{--//Pagination--}}
             <!-- <div class="w3-pagination">
             <div class="col-md-4 col-md-offset-4">
-            {{ $posts->links() }}
+            {{--{{ $posts->links() }}--}}
             </div>
             </div> -->
 
