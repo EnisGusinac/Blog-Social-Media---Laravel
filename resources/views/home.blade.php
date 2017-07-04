@@ -40,9 +40,22 @@
                     <div id="Demo3" class="w3-hide w3-container">
                         <div class="w3-row-padding">
                             <br>
-                            <div class="w3-half">
-                                <img src="w3images/lights.jpg" style="width:100%" class="w3-margin-bottom">
-                            </div>
+
+
+                            {{--<div class="w3-half">--}}
+                                {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-margin-bottom w3-dropdown-hover">--}}
+                                {{--<div class="w3-dropdown-content" style="width:300px">--}}
+                                    {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%">--}}
+                                    {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class=" w3-half w3-dropdown-hover"><img src="w3images/lights.jpg" alt="Monterosso" style="width:20%">--}}
+                                {{--<div class="w3-dropdown-content w3-margin-bottom" style="width:300px"><br>--}}
+                                    {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%">--}}
+                                    {{--<a href="#" class="w3-border">Visit Norway »</a>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+
+
                             <div class="w3-half">
                                 <img src="w3images/nature.jpg" style="width:100%" class="w3-margin-bottom">
                             </div>

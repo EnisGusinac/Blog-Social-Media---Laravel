@@ -1,7 +1,8 @@
-@include('layouts.header')
+{{--@include('layouts.header')--}}
+@extends('layouts.app')
 
-<div class="w3-row-padding">
-    <div class="w3-col m12">
+{{--<div class="w3-container">--}}
+    {{--<div class="w3-col m12">--}}
         <div class="w3-card-2 w3-round w3-white">
             <div class="w3-container w3-padding">
 

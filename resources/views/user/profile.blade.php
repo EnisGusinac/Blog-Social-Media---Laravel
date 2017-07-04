@@ -3,7 +3,7 @@
 
 <div class="w3-card-4">
 
-    <header class="w3-container w3-blue">
+    <header class="w3-container w3-blue w3-padding-24">
         <h1>{{ $user->name }}</h1>
     </header>
 

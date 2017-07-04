@@ -9,15 +9,29 @@
         <form action="/posts/{{ $post->id }}" method="POST"
               class="pull-right" style="margin-left: 25px">
 
-            {{ csrf_field() }}
-            {{ method_field('DELETE') }}
+            <div class="w3-dropdown-hover">
+                <i class="fa fa-caret-down" style="font-size:36px"></i>
+                <div class="w3-dropdown-content w3-bar-block w3-border">
+                    <a href="/posts/{{ $post->id }}/edit" class="w3-bar-item w3-button"> >Change Post</a>
+                    <button class="w3-bar-item w3-button"
 
-            <a href="/posts/{{ $post->id }}/edit" class="btn btn-default btn-xs">
-                Edit post
-            </a>
-            <button class="btn btn-xs" onclick="return confirm('Are you sure you want to delete this post?');">
-                Delete post
-            </button>
+                       {{ csrf_field() }}
+                       {{ method_field('DELETE') }}
+
+                    ><a onclick="return confirm('Are you sure you want to delete this post?');">Delete Post</a></button>
+                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                </div>
+            </div>
+
+            {{--{{ csrf_field() }}--}}
+            {{--{{ method_field('DELETE') }}--}}
+
+            {{--<a href="/posts/{{ $post->id }}/edit" >--}}
+                {{--Edit post--}}
+            {{--</a>--}}
+            {{--<button class="btn btn-xs" onclick="return confirm('Are you sure you want to delete this post?');">--}}
+                {{--Delete post--}}
+            {{--</button>--}}
         </form>
     @endif
 

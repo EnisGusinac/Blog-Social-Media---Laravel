@@ -20,7 +20,7 @@
                         {{--<input type="file" name="image">--}}
                         {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
 
-                    <button type="submit" name="image" class="w3-button w3-theme"><i class="fa fa-image"></i> &nbsp;Upload image</button>
+                    <a type="submit" name="image" class="w3-button w3-theme"><i class="fa fa-image"></i> &nbsp;Upload image</a>
                 </form>
             </div>
         </div>
