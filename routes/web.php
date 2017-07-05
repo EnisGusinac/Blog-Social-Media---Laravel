@@ -17,7 +17,6 @@ Route::post('profile', 'ProfileController@update_avatar');
 //Route::post('posts', 'PostsController@update_image');
 
 
-
 Route::post('posts/like/{post}', 'PostsController@likePost')->name('posts.like');
 
 Auth::routes();
@@ -26,12 +25,10 @@ Route::get('/home', 'HomeController@index');
 
 Route::prefix('admin')->group(function () {
 
-    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin-login');
+    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('/', 'AdminController@index')->name('admin');
-
+    Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
-
 
 Route::resource('posts', 'PostsController');
 Route::get('posts/{post}', 'PostsController@show')->name('posts.show');
