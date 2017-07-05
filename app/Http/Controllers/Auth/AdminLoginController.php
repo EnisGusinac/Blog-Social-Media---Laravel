@@ -15,7 +15,7 @@ class AdminLoginController extends Controller
 
     public function showLoginForm()
     {
-        return view('admins.admin-login');
+        return view('admins.admin.login');
     }
     public function login(Request $request)
     {
@@ -33,7 +33,7 @@ class AdminLoginController extends Controller
         ['email' => $request->email, 'password' => $request->password], $request->remember))
         {
              //       If successful, then redirect to their itendent location
-                return redirect()->intended('admins.admin');
+                return redirect()->intended('admin');
         }
 
 //        If unsuccessfull, then redirect to the login with the form data
