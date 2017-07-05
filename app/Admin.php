@@ -15,7 +15,7 @@ class Admin extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'username', 'dob', 'avatar'
+        'name', 'email', 'password',
     ];
 
     /**
@@ -28,7 +28,7 @@ class Admin extends Authenticatable
     ];
 
     // For natural function of dob
-    protected $dates = [
-        'dob', 'post_on'
+//    protected $dates = [
+//        'dob', 'post_on'
     ];
 }
