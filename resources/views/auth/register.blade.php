@@ -7,10 +7,10 @@
 
 <h2>Modal Signup Form</h2>
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
 
-<div id="id01" class="modal">
-    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+<div id="id02" class="modal">
+    {{--<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>--}}
     <form class="modal-content animate" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
         <div class="container">
@@ -80,7 +80,7 @@
             <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
             <div class="clearfix">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
                 <button type="submit" class="signupbtn">Sign Up</button>
             </div>
         </div>

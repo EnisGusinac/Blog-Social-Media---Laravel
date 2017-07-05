@@ -44,3 +44,56 @@
     </div>
 </div>
 @endsection
+
+
+
+{{--<!DOCTYPE html>--}}
+{{--<html>--}}
+
+{{--Login style--}}
+{{--<link rel="stylesheet" href="css/loginstyle.css">--}}
+
+{{--<body>--}}
+
+{{--<div id="id01" class="modal">--}}
+
+    {{--<div class="panel-body">--}}
+        {{--@if (session('status'))--}}
+            {{--<div class="alert alert-success">--}}
+                {{--{{ session('status') }}--}}
+            {{--</div>--}}
+        {{--@endif--}}
+
+            {{--<div class="container">--}}
+
+                {{--<form class="modal-content animate"  role="form" method="POST" action="{{ route('password.email') }}">--}}
+                {{--{{ csrf_field() }}--}}
+
+                    {{--<div class="col-md-6">--}}
+
+                        {{--<input type="hidden" name="token" value="{{ $token }}">--}}
+                        {{--<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">--}}
+
+                        {{--<label for="email"><b>E-Mail Address</b></label>--}}
+                        {{--<input id="email" type="email" placeholder="Enter e-mail" name="email" value="{{ old('email') }}" required>--}}
+
+                        {{--@if ($errors->has('email'))--}}
+                            {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('email') }}</strong>--}}
+                                    {{--</span>--}}
+                        {{--@endif--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<button type="submit">Send Password Reset Link</button>--}}
+            {{--</div>--}}
+        {{--</form>--}}
+    {{--</div>--}}
+
+
+    {{--<!-- Scripts -->--}}
+    {{--<script src="{{ asset('js/login.js') }}"></script>--}}
+
+{{--</body>--}}
+{{--</html>--}}
+

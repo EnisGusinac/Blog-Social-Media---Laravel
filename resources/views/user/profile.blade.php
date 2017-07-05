@@ -1,40 +1,7 @@
 
 @include('navbar.navbar')
 
-<div class="w3-card-4">
 
-    <header class="w3-container w3-blue w3-padding-24">
-        <h1>{{ $user->name }}</h1>
-    </header>
-
-    <div class="w3-container">
-        <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle">
-        <h2>{{ $user->name }}'s Profile</h2>
-        <h5>Email: {{ $user->email }}</h5>
-        <h5>Birthdate: {{ $user->dob->format('l j F Y') }} ({{$user->dob->age }} years old)</h5>
-        <h5>Joined: {{ $user->created_at->format('l j F Y') }} </h5>
-        <h5>Last update: {{ $user->updated_at->format('g:ia \o\n l jS F Y') }} </h5>
-
-        <form enctype="multipart/form-data" action="/profile" method="POST">
-            <label for="">Update Profile Image</label>
-            <input type="file" name="avatar">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" class="pull-right btn btn-sm btn-primary">
-        </form>
-    </div>
-
-    <footer class="w3-container w3-blue">
-
-        {{--<button class="w3-button w3-block w3-dark-grey">+ Connect</button>--}}
-    </footer>
-
-</div>
-<!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -43,7 +10,7 @@
 <body class="w3-light-grey">
 
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top" style="max-width:1100px; padding-top: 4%">
 
     <!-- The Grid -->
     <div class="w3-row-padding">
@@ -198,6 +165,30 @@
 </body>
 </html>
 
+{{--<header class="w3-container w3-blue w3-padding-24">--}}
+    {{--<h1>{{ $user->name }}</h1>--}}
+{{--</header>--}}
+
+{{--<div class="w3-container">--}}
+    {{--<img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle">--}}
+    {{--<h2>{{ $user->name }}'s Profile</h2>--}}
+    {{--<h5>Email: {{ $user->email }}</h5>--}}
+    {{--<h5>Birthdate: {{ $user->dob->format('l j F Y') }} ({{$user->dob->age }} years old)</h5>--}}
+    {{--<h5>Joined: {{ $user->created_at->format('l j F Y') }} </h5>--}}
+    {{--<h5>Last update: {{ $user->updated_at->format('g:ia \o\n l jS F Y') }} </h5>--}}
+
+    {{--<form enctype="multipart/form-data" action="/profile" method="POST">--}}
+        {{--<label for="">Update Profile Image</label>--}}
+        {{--<input type="file" name="avatar">--}}
+        {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
+        {{--<input type="submit" class="pull-right btn btn-sm btn-primary">--}}
+    {{--</form>--}}
+{{--</div>--}}
+
+{{--<footer class="w3-container w3-blue">--}}
+
+    {{--<button class="w3-button w3-block w3-dark-grey">+ Connect</button>--}}
+{{--</footer>--}}
 
 
 {{--<style type="text/css">--}}

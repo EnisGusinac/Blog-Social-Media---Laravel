@@ -4,7 +4,7 @@
 
 
 <!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1300px;margin-top:80px">
+<div class="w3-container w3-content" style="max-width:1200px;margin-top:6%">
     <!-- The Grid -->
     <div class="w3-row">
         <!-- Left Column -->
@@ -170,7 +170,7 @@
 
             <div class="w3-card-2 w3-round w3-blue w3-padding-16 w3-center w3-hover-yellow">
                 <a href="http://www.friv-2017.com/" title="Play Friv games">
-                    <img src="http://m.juegosfriv2017.net/games/images/Tomb-Runner.png">
+                    <img id="friv" src="http://m.juegosfriv2017.net/games/images/Tomb-Runner.png">
                 </a>
                 <br> Wanna play some Games? Friv is awesome!!
             </div>
