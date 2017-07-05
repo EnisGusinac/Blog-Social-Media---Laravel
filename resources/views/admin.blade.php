@@ -9,9 +9,13 @@
     <div class="w3-row">
         <!-- Left Column -->
         <div class="w3-col m3">
+            <div class="w3-card-2 w3-round w3-white w3-center">
+                <p><h2>Welcome admin !</h2></p>
+            </div>
 
             <!-- Profile -->
             <div class="w3-card-2 w3-round w3-white">
+
                 <div class="w3-container">
                     <h4 class="w3-center"> {{ $user->name }} </h4>
                     <p class="w3-center"><img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle"
@@ -21,7 +25,7 @@
                     <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Nijmegen, Nederlands</p>
                     <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
                         {{ $user->dob->format('j F Y') }} ({{ $user->dob->age }} years old)</p>
-{{--                    {{ csrf_field() }}--}}
+                    {{--                    {{ csrf_field() }}--}}
                 </div>
             </div>
             <br>
@@ -44,16 +48,16 @@
 
 
                             {{--<div class="w3-half">--}}
-                                {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-margin-bottom w3-dropdown-hover">--}}
-                                {{--<div class="w3-dropdown-content" style="width:300px">--}}
-                                    {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%">--}}
-                                    {{--</div>--}}
+                            {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-margin-bottom w3-dropdown-hover">--}}
+                            {{--<div class="w3-dropdown-content" style="width:300px">--}}
+                            {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%">--}}
+                            {{--</div>--}}
                             {{--</div>--}}
                             {{--<div class=" w3-half w3-dropdown-hover"><img src="w3images/lights.jpg" alt="Monterosso" style="width:20%">--}}
-                                {{--<div class="w3-dropdown-content w3-margin-bottom" style="width:300px"><br>--}}
-                                    {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%">--}}
-                                    {{--<a href="#" class="w3-border">Visit Norway »</a>--}}
-                                {{--</div>--}}
+                            {{--<div class="w3-dropdown-content w3-margin-bottom" style="width:300px"><br>--}}
+                            {{--<img src="w3images/lights.jpg" alt="Norway" style="width:100%">--}}
+                            {{--<a href="#" class="w3-border">Visit Norway »</a>--}}
+                            {{--</div>--}}
                             {{--</div>--}}
 
 
@@ -120,19 +124,19 @@
 
 
 
-                    {{--//Pagination--}}
-            <div class="w3-clear nextprev">
-          <a class="w3-left w3-btn" href="w3css_colors.asp">❮ Previous</a>
-          <a class="w3-right w3-btn" href="w3css_panels.asp">Next ❯</a>
-            {{ $posts->links() }}
-          </div>
-
             {{--//Pagination--}}
-            <!-- <div class="w3-pagination">
+            <div class="w3-clear nextprev">
+                <a class="w3-left w3-btn" href="w3css_colors.asp">❮ Previous</a>
+                <a class="w3-right w3-btn" href="w3css_panels.asp">Next ❯</a>
+                {{ $posts->links() }}
+            </div>
+
+        {{--//Pagination--}}
+        <!-- <div class="w3-pagination">
             <div class="col-md-4 col-md-offset-4">
             {{--{{ $posts->links() }}--}}
-            </div>
-            </div> -->
+                </div>
+                </div> -->
 
             <!-- End Middle Column -->
         </div>
