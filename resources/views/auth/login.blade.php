@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 
-{{--Register style--}}
+{{--Login style--}}
 <link rel="stylesheet" href="css/loginstyle.css">
 
 <body>
@@ -15,10 +15,10 @@
 
     <form class="modal-content animate"  role="form" method="POST" action="{{ route('login') }}">
         {{ csrf_field() }}
-        <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
-        </div>
+        {{--<div class="imgcontainer">--}}
+            {{--<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>--}}
+            {{--<img src="img_avatar2.png" alt="Avatar" class="avatar">--}}
+        {{--</div>--}}
 
         <div class="container">
 

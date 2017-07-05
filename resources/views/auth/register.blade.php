@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 {{--Register style--}}
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/regstyle.css">
 <body>
 
 <h2>Modal Signup Form</h2>
@@ -50,17 +50,6 @@
             </div>
 
 
-
-            <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
-                <label for="date"><b>Date of Birth</b></label>
-                <input id="dob" type="date" placeholder="Date of Birth" name="dob" value="{{ old('dob') }}" required autofocus>
-                @if ($errors->has('dob'))
-                    <span class="help-block">
-                                <strong>{{ $errors->first('dob') }}</strong>
-                            </span>
-                @endif
-            </div>
-
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                 <label for="password"><b>Password</b></label>
                 <input id="password" type="password" placeholder="Password" name="password"  required>
@@ -73,6 +62,20 @@
 
             <label for="password-confirm"><b>Repeat Password</b></label>
             <input type="password" placeholder="Repeat Password" id="password-confirm" class="form-control" name="password_confirmation" required>
+
+            <br>
+            <div class="form-group{{ $errors->has('dob') ? ' has-error' : '' }}">
+                <label for="date"><b>Date of Birth</b></label>
+                <input id="dob" type="date" placeholder="Date of Birth" name="dob" value="{{ old('dob') }}" required autofocus>
+                @if ($errors->has('dob'))
+                    <span class="help-block">
+                                <strong>{{ $errors->first('dob') }}</strong>
+                            </span>
+                @endif
+            </div>
+            <br>
+
+
             <input type="checkbox" checked="checked"> Remember me
             <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
