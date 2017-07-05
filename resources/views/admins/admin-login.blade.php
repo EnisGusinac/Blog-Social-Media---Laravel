@@ -3,11 +3,11 @@
 <html>
 
 {{--Login style--}}
-<link rel="stylesheet" href="css/loginstyle.css">
+<link rel="stylesheet" href="/css/loginstyle.css">
 
 <body>
 
-<h2>Modal Login Form</h2>
+<h2>Admin Login Form</h2>
 
 <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Admin Login</button>
 
@@ -15,13 +15,18 @@
 
     <form class="modal-content animate"  role="form" method="POST" action="{{ route('admin.login.submit') }}">
         {{ csrf_field() }}
+        {{--<div class="imgcontainer">--}}
+        {{--<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>--}}
+        {{--<img src="img_avatar2.png" alt="Avatar" class="avatar">--}}
+        {{--</div>--}}
 
         <div class="container">
 
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                {{ csrf_field() }}
 
                 <div class="col-md-6">
-                    <label for="email"><b>E-Mail Address</b></label>
+                    <label for="email"><b>Admin E-Mail Address</b></label>
                     <input id="email" type="text" placeholder="Enter e-mail" name="email" value="{{ old('email') }}" required autofocus>
 
                     @if ($errors->has('email'))
@@ -35,7 +40,7 @@
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 
                 <div class="col-md-6">
-                    <label for="password"><b>Password</b></label>
+                    <label for="password"><b>Admin Password</b></label>
                     <input id="password" type="password" placeholder="Enter your password" name="password" required>
 
                     @if ($errors->has('password'))

@@ -10,7 +10,7 @@
         <!-- Left Column -->
         <div class="w3-col m3">
             <div class="w3-card-2 w3-round w3-white w3-center">
-                <p><h2>Welcome admin !</h2></p>
+                <h2>Welcome admin !</h2>
             </div>
 
             <!-- Profile -->
