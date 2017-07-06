@@ -34,9 +34,45 @@
 
     <p>{{ $post->shortContent }}
         <a href="/posts/{{ $post->id }}"> Read more</a></p>
+    <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+    <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comment  </b> <span class="w3-tag w3-white">3</span></button></p>
 
-    <button type="button" data-postid="{{ $post->id }}" data-likeurl="{{ route('posts.like', ['post' => $post->id]) }}" class="like-button w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like (<span class="post-{{ $post->id }}-likes">{{$post->likes}}</span>)</button>
-    <button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>
+
+    {{--<button type="button" data-postid="{{ $post->id }}" data-likeurl="{{ route('posts.like', ['post' => $post->id]) }}" class="like-button w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i> &nbsp;Like (<span class="post-{{ $post->id }}-likes">{{$post->likes}}</span>)</button>--}}
+    {{--<button type="button" class="w3-button w3-theme-d2 w3-margin-bottom"><i class="fa fa-comment"></i> &nbsp;Comment</button>--}}
+
+
+    <!-- Example of comment field -->
+    <div id="demo3" style="display:none">
+        <hr>
+        <div class="w3-row w3-margin-bottom">
+            <div class="w3-col l2 m3">
+                <img src="uploads/avatars/1499203003.jpg" style="width:90px;">
+            </div>
+            <div class="w3-col l10 m9">
+                <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
+                <p>That was a great runway show! Thanks for everything.</p>
+            </div>
+        </div>
+        <div class="w3-row w3-margin-bottom">
+            <div class="w3-col l2 m3">
+                <img src="uploads/avatars/1498136704.jpg" style="width:90px;">
+            </div>
+            <div class="w3-col l10 m9">
+                <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
+                <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+        </div>
+        <div class="w3-row w3-margin-bottom">
+            <div class="w3-col l2 m3">
+                <img src="uploads/avatars/avatar6.jpg" style="width:90px;">
+            </div>
+            <div class="w3-col l10 m9">
+                <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
+                <p>Cant wait for the runway to start!</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 

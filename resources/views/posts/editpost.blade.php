@@ -1,5 +1,5 @@
 {{--@include('layouts.header')--}}
-@extends('layouts.app')
+
 
 {{--<div class="w3-container">--}}
     {{--<div class="w3-col m12">--}}
