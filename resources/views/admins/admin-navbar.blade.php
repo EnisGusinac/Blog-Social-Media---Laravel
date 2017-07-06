@@ -1,11 +1,8 @@
 @include('layouts.header')
 
-{{--@if (Auth::user() && Auth::user()->admin)){--}}
-
 
 @if (Auth::guest())
-    <li><a href="{{ route('login') }}" style="color: whitesmoke">Login</a></li>
-    <li><a href="{{ route('register') }}" style="color: whitesmoke">Register</a></li>
+    <li><a href="{{ route('admin.login') }}">Login</a></li>
 @else
     <!-- Navbar -->
     <div class="w3-top">
@@ -20,6 +17,10 @@
                title="Account Settings"><i class="fa fa-user"></i></a>
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i
                         class="fa fa-envelope"></i></a>
+            @if(Auth::user() && Auth::user()->admin)
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i
+                            class="fa fa-envelope"></i></a>
+            @endif
             <div class="w3-dropdown-hover w3-hide-small">
                 <button class="w3-button w3-padding-large" title="Notifications"><i class="fa fa-bell"></i><span
                             class="w3-badge w3-right w3-small w3-green">3</span></button>
@@ -35,11 +36,11 @@
                     <img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:30px; width:35px;">
                     {{ $user->name }}
                     <i class="fa fa-caret-down" style="font-size:36px"></i>
-                    </button>
+                </button>
 
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
 
-                    <a href="/profile" class=" w3-bar-item w3-button" title="Visit Your Account">
+                    <a href="/admin/profile" class=" w3-bar-item w3-button" title="Visit Your Account">
 
                         <img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}"
                              style="width: 70px; height: 70px; position: relative; left: 10px; border-radius: 100%; "><br><br>
@@ -65,13 +66,6 @@
                 </div>
             </div>
 
-            {{--</div>--}}
-            {{--<div class="nav navbar-nav navbar-right">--}}
-            {{--<a href="/profile/{username}" class=" w3-bar-item w3-button w3-hide-small w3-right w3-padding-medium w3-hover"
-             title="Visit Your Account">--}}
-            {{--<img src="/uploads/avatars/{{ $user->avatar }}" class="w3-circle" style="height:30px;width:30px">{{$user->name}}--}}
-            {{--@include('navbar.rightProfileDropdown')--}}
-            {{--</div>--}}
         </div>
     </div>
 

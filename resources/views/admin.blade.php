@@ -1,6 +1,6 @@
 
 <!-- Navbar -->
-@include('navbar.navbar')
+@include('admins.admin-navbar')
 
 
 <!-- Page Container -->
@@ -24,7 +24,7 @@
                     <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Web Developer, Service2fruit.com </p>
                     <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Nijmegen, Nederlands</p>
                     <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
-                        {{ $user->dob->format('j F Y') }} ({{ $user->dob->age }} years old)</p>
+                        {{--{{ $user->dob->format('j F Y') }} ({{ $user->dob->age }} years old)</p>--}}
                     {{--                    {{ csrf_field() }}--}}
                 </div>
             </div>

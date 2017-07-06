@@ -17,6 +17,7 @@ class AdminLoginController extends Controller
     {
         return view('auth.admin-login');
     }
+
     public function login(Request $request)
     {
 //        Validate the form data

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'username', 'dob', 'avatar'
+        'name', 'admin', 'email', 'password', 'username', 'dob', 'avatar'
     ];
 
     /**
@@ -31,4 +31,5 @@ class User extends Authenticatable
     protected $dates = [
         'dob', 'post_on'
     ];
+    
 }
