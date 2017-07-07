@@ -3,7 +3,6 @@
 
 @forelse($posts as $post)
 
-
 <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
 
     @if($post->user_id == Auth::id())
@@ -11,7 +10,7 @@
               class="pull-right" style="margin-left: 25px">
 
             <div class="w3-dropdown-hover">
-                <i class="fa fa-caret-down" style="font-size:36px"></i>
+                <i class="fa fa-caret-down" style="font-size:23px"></i>
                 <div class="w3-dropdown-content w3-bar-block w3-border">
                     <a href="/posts/{{ $post->id }}" class="w3-bar-item w3-button"> Read more</a>
                     <a href="/posts/{{ $post->id }}/edit" class="w3-bar-item w3-button"> Edit post</a>
@@ -46,32 +45,32 @@
 
 
     <!-- Example of comment field -->
-    <div id="demo3" style="display:none"
+    <div id="demo3" style="display:none">
+        <hr>
         <div class="w3-row w3-margin-bottom">
-            <hr>
             <div class="w3-col l2 m3">
-                <img src="uploads/avatars/1499203003.jpg" style="width:70px;">
+                <img src="/w3images/girl_mountain.jpg" style="width:90px;">
             </div>
             <div class="w3-col l10 m9">
-                <h4>Jane <span class="w3-opacity w3-small">April 10, 2015, 7:22 PM</span></h4>
+                <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
                 <p>That was a great runway show! Thanks for everything.</p>
             </div>
         </div>
         <div class="w3-row w3-margin-bottom">
             <div class="w3-col l2 m3">
-                <img src="uploads/avatars/1498136704.jpg" style="width:70px;">
+                <img src="/w3images/boy.jpg" style="width:90px;">
             </div>
             <div class="w3-col l10 m9">
-                <h4>John <span class="w3-opacity w3-small">April 8, 2015, 10:32 PM</span></h4>
+                <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
                 <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
             </div>
         </div>
         <div class="w3-row w3-margin-bottom">
             <div class="w3-col l2 m3">
-                <img src="uploads/avatars/avatar6.jpg" style="width:70px;">
+                <img src="/w3images/girl_hood.jpg" style="width:90px;">
             </div>
             <div class="w3-col l10 m9">
-                <h4>Anja <span class="w3-opacity w3-small">April 7, 2015, 9:12 PM</span></h4>
+                <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
                 <p>Cant wait for the runway to start!</p>
             </div>
         </div>

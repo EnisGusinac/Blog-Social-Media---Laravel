@@ -5,11 +5,11 @@
 
 <!-- Page Container -->
 <div class="w3-container w3-content" style="max-width:1200px;margin-top:6%">
-    @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
-    @endif
+    {{--@if (session('status'))--}}
+        {{--<div class="alert alert-success">--}}
+            {{--{{ session('status') }}--}}
+        {{--</div>--}}
+{{--@endif--}}
     <!-- The Grid -->
     <div class="w3-row">
         <!-- Left Column -->
@@ -26,7 +26,6 @@
                     <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Nijmegen, Nederlands</p>
                     <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
                         {{ $user->dob->format('j F Y') }} ({{ $user->dob->age }} years old)</p>
-{{--                    {{ csrf_field() }}--}}
                 </div>
             </div>
             <br>
