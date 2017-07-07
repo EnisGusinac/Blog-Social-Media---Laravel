@@ -22,6 +22,28 @@ class ProfileController extends Controller
     //     return view('user.profile', compact('user'));
     // }
 
+    public function testAdmin() {
+
+        if (Auth::check() && Auth::user()->admin) {
+            dd('dosao si ' .  Auth::user()->admin);
+        }
+        return redirect('home');
+
+    }
+    public function users()
+    {
+        // add check fo auth user AND admin user
+        // oterwise redirect to home
+        if(Auth::check() && Auth::user()->admin) {
+            // get all users
+            $userList = User::all();
+            return view('admin.users', compact('userList'));
+        }
+        else{
+            return redirect('home');
+        }
+    }
+
     public function profileRoute()
     {
         return view('user.profile', array('user' => Auth::user()) );

@@ -154,8 +154,8 @@
             <div class="w3-card-2 w3-round w3-white w3-center">
                 <div class="w3-container">
                     <p>Friend Request</p>
-                    <img src="/uploads/avatars/adis.jpg" alt="Avatar" style="width:80%"><br>
-                    <span>Adis Corovic</span>
+                    <img src="/uploads/avatars/nuro.jpg" alt="Avatar" style="width:80%"><br>
+                    <span>Nuradin Dedeic</span>
                     <div class="w3-row w3-opacity">
 
                         <div class="w3-half">
