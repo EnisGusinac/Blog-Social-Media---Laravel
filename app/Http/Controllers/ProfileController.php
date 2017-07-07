@@ -30,7 +30,7 @@ class ProfileController extends Controller
         return redirect('home');
 
     }
-    public function users()
+    public function users(Request $request)
     {
         // add check fo auth user AND admin user
         // oterwise redirect to home
@@ -39,9 +39,8 @@ class ProfileController extends Controller
             $userList = User::all();
             return view('admin.users', compact('userList'));
         }
-        else{
-            return redirect('home');
-        }
+        $request->session()->flash('status', 'You are not allowed to view this page.');
+        return redirect('home');
     }
 
     public function profileRoute()
