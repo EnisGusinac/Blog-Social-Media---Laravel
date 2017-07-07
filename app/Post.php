@@ -17,4 +17,11 @@ class Post extends Model
         return substr($this->content, 0, 300) . "...";
     }
 
+    /**
+     * Get user that posted this post.
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

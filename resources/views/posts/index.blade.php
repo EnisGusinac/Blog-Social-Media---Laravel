@@ -32,7 +32,7 @@
     <span class="w3-right w3-opacity">{{ $user->created_at->format('l j F Y') }}</span>
 
 @if ( $user->id == Auth::id() )
-    <h4>{{ $user->name }}</h4><br>
+    <h4>{{ $post->user()->first()->name }}</h4><br>
     <hr class="w3-clear">
 @endif
     <p>{{ $post->content }}</p>
@@ -46,7 +46,7 @@
 
 
     <!-- Example of comment field -->
-    <div id="demo3" style="display:none">
+    <div id="demo3" style="display:none"
         <div class="w3-row w3-margin-bottom">
             <hr>
             <div class="w3-col l2 m3">

@@ -31,5 +31,13 @@ class User extends Authenticatable
     protected $dates = [
         'dob', 'post_on'
     ];
+
+    /**
+     * User has 0 or more posts
+     */
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
     
 }
