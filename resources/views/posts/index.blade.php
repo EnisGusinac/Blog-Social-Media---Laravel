@@ -15,7 +15,6 @@
                     <a href="/posts/{{ $post->id }}" class="w3-bar-item w3-button"> Read more</a>
                     <a href="/posts/{{ $post->id }}/edit" class="w3-bar-item w3-button"> Edit post</a>
                     <button class="w3-bar-item w3-button">
-
                        {{ csrf_field() }}
                        {{ method_field('DELETE') }}
 
@@ -46,7 +45,9 @@
 
     <!-- Example of comment field -->
     <div id="demo3" style="display:none">
-        <hr>
+
+        @include('comments.create')
+
         <div class="w3-row w3-margin-bottom">
             <div class="w3-col l2 m3">
                 <img src="/w3images/girl_mountain.jpg" style="width:90px;">
