@@ -1,6 +1,4 @@
 
-<!DOCTYPE html>
-<html>
 {{--Register style--}}
 <link rel="stylesheet" href="css/regstyle.css">
 <body>

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use Auth;
-use DB;
 use Image;
 
 
@@ -20,14 +19,6 @@ class PostsController extends Controller
     public function create()
     {
         return view('posts.createpost');
-    }
-    public function image()
-    {
-
-    }
-    public function upload_image()
-    {
-
     }
 
     public function store(Request $request)

@@ -5,6 +5,11 @@
 
 <!-- Page Container -->
 <div class="w3-container w3-content" style="max-width:1200px;margin-top:6%">
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+@endif
     <!-- The Grid -->
     <div class="w3-row">
         <!-- Left Column -->
@@ -21,7 +26,6 @@
                     <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Nijmegen, Nederlands</p>
                     <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>
                         {{ $user->dob->format('j F Y') }} ({{ $user->dob->age }} years old)</p>
-{{--                    {{ csrf_field() }}--}}
                 </div>
             </div>
             <br>
@@ -154,8 +158,8 @@
             <div class="w3-card-2 w3-round w3-white w3-center">
                 <div class="w3-container">
                     <p>Friend Request</p>
-                    <img src="/uploads/avatars/adis.jpg" alt="Avatar" style="width:80%"><br>
-                    <span>Adis Corovic</span>
+                    <img src="/uploads/avatars/nuro.jpg" alt="Avatar" style="width:80%"><br>
+                    <span>Nuradin Dedeic</span>
                     <div class="w3-row w3-opacity">
 
                         <div class="w3-half">

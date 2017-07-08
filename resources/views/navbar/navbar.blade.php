@@ -1,5 +1,7 @@
 @include('layouts.header')
 
+{{--@if (Auth::user() && Auth::user()->admin)){--}}
+
 
 @if (Auth::guest())
     <li><a href="{{ route('login') }}" style="color: whitesmoke">Login</a></li>
@@ -46,6 +48,11 @@
                         </i>
                     </a>
                     <hr>
+
+                    @if(Auth::check() && Auth::user()->admin)
+
+                        <a href="/users" class="w3-bar-item w3-button"><i class="fa fa-user"> Users</i></a>
+                    @endif
 
                     <a href="/posts" class="w3-bar-item w3-button"><i class="fa fa-pencil"> My Posts</i></a>
                     <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"> My Account</i></a>

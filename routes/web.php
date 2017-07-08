@@ -10,11 +10,10 @@ Route::get('/', function () {
 
 Route::get('/profile', 'ProfileController@profileRoute');
 Route::post('profile', 'ProfileController@update_avatar');
-// Route::get('/profile/{username}', 'ProfileController@profile');
 
-//
-//Route::get('posts', 'PostsController@image');
-//Route::post('posts', 'PostsController@update_image');
+
+Route::get('test-admin', 'ProfileController@testAdmin');
+Route::get('users', 'ProfileController@users');
 
 
 Route::post('posts/like/{post}', 'PostsController@likePost')->name('posts.like');
@@ -26,6 +25,7 @@ Route::get('/home', 'HomeController@index');
 Route::prefix('admin')->group(function() {
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+    Route::get('/profile', 'AdminController@profile')->name('admin.profile');
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
 

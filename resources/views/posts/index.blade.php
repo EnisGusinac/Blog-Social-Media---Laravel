@@ -2,24 +2,25 @@
 
 
 @forelse($posts as $post)
-<div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
 
+<div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
 
     @if($post->user_id == Auth::id())
         <form action="/posts/{{ $post->id }}" method="POST"
               class="pull-right" style="margin-left: 25px">
 
             <div class="w3-dropdown-hover">
-                <i class="fa fa-caret-down" style="font-size:36px"></i>
+                <i class="fa fa-caret-down" style="font-size:23px"></i>
                 <div class="w3-dropdown-content w3-bar-block w3-border">
-                    <a href="/posts/{{ $post->id }}/edit" class="w3-bar-item w3-button"> >Change Post</a>
-                    <button class="w3-bar-item w3-button"
+                    <a href="/posts/{{ $post->id }}" class="w3-bar-item w3-button"> Read more</a>
+                    <a href="/posts/{{ $post->id }}/edit" class="w3-bar-item w3-button"> Edit post</a>
+                    <button class="w3-bar-item w3-button">
 
                        {{ csrf_field() }}
                        {{ method_field('DELETE') }}
 
-                    ><a onclick="return confirm('Are you sure you want to delete this post?');">Delete Post</a></button>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+                    <a onclick="return confirm('Are you sure you want to delete this post?');">Delete post</a></button>
+
                 </div>
             </div>
         </form>
@@ -29,11 +30,12 @@
      style="width:60px">
     <span class="w3-right w3-opacity">{{ $user->created_at->format('l j F Y') }}</span>
 
-    <h4>{{ $user->name }}</h4><br>
+@if ( $user->id == Auth::id() )
+    <h4>{{ $post->user()->first()->name }}</h4><br>
     <hr class="w3-clear">
+@endif
+    <p>{{ $post->content }}</p>
 
-    <p>{{ $post->shortContent }}
-        <a href="/posts/{{ $post->id }}"> Read more</a></p>
     <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
     <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comment  </b> <span class="w3-tag w3-white">3</span></button></p>
 
@@ -47,7 +49,7 @@
         <hr>
         <div class="w3-row w3-margin-bottom">
             <div class="w3-col l2 m3">
-                <img src="uploads/avatars/1499203003.jpg" style="width:90px;">
+                <img src="/w3images/girl_mountain.jpg" style="width:90px;">
             </div>
             <div class="w3-col l10 m9">
                 <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
@@ -56,7 +58,7 @@
         </div>
         <div class="w3-row w3-margin-bottom">
             <div class="w3-col l2 m3">
-                <img src="uploads/avatars/1498136704.jpg" style="width:90px;">
+                <img src="/w3images/boy.jpg" style="width:90px;">
             </div>
             <div class="w3-col l10 m9">
                 <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
@@ -65,7 +67,7 @@
         </div>
         <div class="w3-row w3-margin-bottom">
             <div class="w3-col l2 m3">
-                <img src="uploads/avatars/avatar6.jpg" style="width:90px;">
+                <img src="/w3images/girl_hood.jpg" style="width:90px;">
             </div>
             <div class="w3-col l10 m9">
                 <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
@@ -75,63 +77,9 @@
     </div>
 </div>
 
-
-
 @empty
-    <p> No posts found! </p>
+
 @endforelse
-
-
-<!-- Blog entry -->
-<div class="w3-container w3-white w3-margin w3-padding-large">
-    <div class="w3-center">
-        <h3>TITLE HEADING</h3>
-        <h5>Title description, <span class="w3-opacity">April 7, 2016</span></h5>
-    </div>
-
-    <div class="w3-justify">
-        <img src="/w3images/runway.jpg" alt="Runway" style="width:100%" class="w3-padding-16">
-        <p><strong>Dont miss!</strong> The runway in New York City this weekend is gonna be legendary!</p>
-        <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
-            mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
-        <p class="w3-clear"></p>
-
-        <!-- Example of comment field -->
-        <div id="demo3" style="display:none">
-            <hr>
-            <div class="w3-row w3-margin-bottom">
-                <div class="w3-col l2 m3">
-                    <img src="/w3images/girl_mountain.jpg" style="width:90px;">
-                </div>
-                <div class="w3-col l10 m9">
-                    <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
-                    <p>That was a great runway show! Thanks for everything.</p>
-                </div>
-            </div>
-            <div class="w3-row w3-margin-bottom">
-                <div class="w3-col l2 m3">
-                    <img src="/w3images/boy.jpg" style="width:90px;">
-                </div>
-                <div class="w3-col l10 m9">
-                    <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
-                    <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-            </div>
-            <div class="w3-row w3-margin-bottom">
-                <div class="w3-col l2 m3">
-                    <img src="/w3images/girl_hood.jpg" style="width:90px;">
-                </div>
-                <div class="w3-col l10 m9">
-                    <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
-                    <p>Cant wait for the runway to start!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
     <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
