@@ -17,10 +17,10 @@
                 <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i> &nbsp;Post</button>
 
                     {{--<form enctype="multipart/form-data" action="/posts" method="POST">--}}
-                        {{--<input type="file" name="image">--}}
+                    <input type="file" name="image"><i class="fa fa-image"></i> &nbsp; Upload Image
                         {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
 
-                    <a type="submit" name="image" class="w3-button w3-theme"><i class="fa fa-image"></i> &nbsp;Upload image</a>
+                    {{--<a type="submit" name="image" class="w3-button w3-theme"><i class="fa fa-image"></i> &nbsp;Upload image</a>--}}
                 </form>
             </div>
         </div>

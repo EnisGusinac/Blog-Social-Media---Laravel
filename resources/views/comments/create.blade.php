@@ -6,7 +6,7 @@
     </div>
     <div class="w3-col l10 m9">
         {{--<p>{{ $user->name }} <span class="w3-opacity w3-medium">{{ $user->created_at->format('l j F Y') }}</span></p>--}}
-        <form action="/comments" method="POST">
+        <form action="/comment" method="POST">
             {{ csrf_field() }}
 
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">

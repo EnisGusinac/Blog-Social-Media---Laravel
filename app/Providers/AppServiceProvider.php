@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use View;
 use Auth;
-use DB;
+use App\Comment;
 use App\Post;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
         //Share 'user' with all views
         View::composer('*', function ($view){
             $view->with('user', Auth::user());
+        });
+
+        //Share 'comments' with all views
+        View::composer('*', function ($view){
+            $view->with('comments', Comment::all());
         });
 
         //Share 'posts' with all views

@@ -15,7 +15,7 @@ class CreateCommentFieldsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('comment_id');
+            $table->integer('user_id');
             $table->text('content');
             $table->integer('likes')->default();
             $table->timestamps();

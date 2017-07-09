@@ -7,12 +7,12 @@
               class="pull-right" style="margin-left: 25px">
 
             {{ csrf_field() }}
-            {{ method_field('DELETE') }}
 
             <a href="/posts/{{ $post->id }}/edit" class="btn btn-default btn-xs">
                 Edit post
             </a>
             <button class="btn btn-xs" onclick="return confirm('Are you sure you want to delete this post?');">
+                {{ method_field('DELETE') }}
                 Delete post
             </button>
         </form>

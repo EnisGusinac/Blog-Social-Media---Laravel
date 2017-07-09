@@ -20,19 +20,20 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 // Routes for POSTS
-Route::prefix('posts')->group(function() {
-    Route::resource('/', 'PostsController');
-    Route::get('/{post}', 'PostsController@show')->name('posts.show');
-    Route::get('/{post}/edit', 'PostsController@edit')->name('posts.edit');
-    Route::post('/like/{post}', 'PostsController@likePost')->name('posts.like');
-});
-// Routes for COMMENTS
-//Route::prefix('comments')->group(function() {
-    Route::resource('comments', 'CommentsController');
-//    Route::get('/{comment}', 'CommentsController@show')->name('comments.show');
-//    Route::get('/{comment}/edit', 'CommentsController@edit')->name('comments.edit');
-//    Route::post('/like/{comment}', 'CommentsController@likeComment')->name('comments.like');
+//Route::prefix('posts')->group(function() {
+    Route::resource('posts', 'PostsController');
+    Route::get('posts/{post}', 'PostsController@show')->name('posts.show');
+    Route::get('posts/{post}/edit', 'PostsController@edit')->name('posts.edit');
+    Route::post('posts/like/{post}', 'PostsController@likePost')->name('posts.like');
 //});
+
+// Routes for COMMENTS
+Route::prefix('comment')->group(function() {
+    Route::resource('/', 'CommentsController');
+//    Route::get('/{comment}', 'CommentsController@show')->name('comment.show');
+//    Route::get('/{comment}/edit', 'CommentsController@edit')->name('comment.edit');
+//    Route::post('/like/{comment}', 'CommentsController@likeComment')->name('comment.like');
+});
 
 //Route::prefix('admin')->group(function() {
 //    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

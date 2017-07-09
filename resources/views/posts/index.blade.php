@@ -6,7 +6,7 @@
 <div class="w3-container w3-card-2 w3-white w3-round w3-margin"><br>
 
     @if($post->user_id == Auth::id())
-        <form action="/posts/{{ $post->id }}" method="POST"
+        <form action="/posts/{{ $post->id }}" onsubmit="return confirm('Are you sure?');" method="POST"
               class="pull-right" style="margin-left: 25px">
 
             <div class="w3-dropdown-hover">
@@ -14,11 +14,11 @@
                 <div class="w3-dropdown-content w3-bar-block w3-border">
                     <a href="/posts/{{ $post->id }}" class="w3-bar-item w3-button"> Read more</a>
                     <a href="/posts/{{ $post->id }}/edit" class="w3-bar-item w3-button"> Edit post</a>
-                    <button class="w3-bar-item w3-button">
+                    <button type="submit" class="w3-bar-item w3-button">
                        {{ csrf_field() }}
                        {{ method_field('DELETE') }}
 
-                    <a onclick="return confirm('Are you sure you want to delete this post?');">Delete post</a></button>
+                    Delete post</button>
 
                 </div>
             </div>
@@ -44,9 +44,11 @@
 
 
     <!-- Example of comment field -->
-    <div id="demo3" style="display:none">
+    <div id="demo3" style="display:none; background-color: whitesmoke">
 
         @include('comments.create')
+
+        @include('comments.index')
 
         <div class="w3-row w3-margin-bottom">
             <div class="w3-col l2 m3">
