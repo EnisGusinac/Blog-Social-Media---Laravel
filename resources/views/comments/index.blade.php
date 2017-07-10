@@ -17,8 +17,13 @@
                 {{ csrf_field() }}
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
-                <h4>{{ $user->name}} <span class="w3-opacity w3-medium">{{ $user->created_at->format('l j F Y') }}</span></h4>
-                <p>{{ $comment->content }} </p>
+                <h4>{{ $user->name}} <span class="w3-opacity-min w3-small w3-right">{{ $user->created_at->diffForHumans() }}</span></h4>
+
+                    @if(strlen( $comment->content) > 200)
+                <p>{{ $comment->shortComment }} </p>
+                    @else
+                <p> {{ $comment->content }}</p>
+                    @endif
 
             </form>
             @endif

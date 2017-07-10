@@ -12,10 +12,10 @@ class Comment extends Model
 
     // protected $guarded = ['id'];
 
-//    public function getShortContentAttribute()
-//    {
-//        return substr($this->content, 0, 300) . "...";
-//    }
+    public function getShortCommentAttribute()
+    {
+        return substr($this->content, 0, 200) . "...";
+    }
 
     /**
      * Get user that posted this post.

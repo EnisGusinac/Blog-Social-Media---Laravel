@@ -33,7 +33,16 @@
     <h4>{{ $post->user()->first()->name }}</h4><br>
     <hr class="w3-clear">
 @endif
-    <p>{{ $post->content }}</p>
+    {{-- Short and Normal Post Content (more than 200 will get Read more link)--}}
+    @if(strlen( $post->content) > 200)
+
+        <p>{{ $post->shortContent }}
+        <a href="/posts/{{ $post->id }}">Read more</a></p>
+
+    @else
+        <p> {{ $post->content }}</p>
+    @endif
+
 
     <p class="w3-left"><button class="w3-button w3-white w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
     <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Comment  </b> <span class="w3-tag w3-white">3</span></button></p>
