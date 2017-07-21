@@ -1,4 +1,48 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<head>
+    <!-- templatemo 418 form pack -->
+    <!--
+    Form Pack
+    http://www.templatemo.com/preview/templatemo_418_form_pack
+    -->
+    <title>Forgot Password</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+    <link href="css/templatemo_style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="templatemo-bg-gray">
+<div class="container">
+    <div class="col-md-12">
+        <h1 class="margin-bottom-15">Password Reset</h1>
+        <form class="form-horizontal templatemo-forgot-password-form templatemo-container" role="form" action="#" method="post">
+            <div class="form-group">
+                <div class="col-md-12">
+                    Please enter your email address that you registered in our website.
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="text" class="form-control" id="email" placeholder="Your email">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input type="submit" value="Submit" class="btn btn-danger">
+                    <br><br>
+                    <a href="{{ route('login') }}">Go to Login</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+
 
 @section('content')
 <div class="container">
@@ -74,88 +118,4 @@
     </div>
 </div>
 @endsection
-
-
-
-{{--<!DOCTYPE html>--}}
-{{--<html>--}}
-
-{{--Login style--}}
-{{--<link rel="stylesheet" href="css/loginstyle.css">--}}
-
-{{--<body>--}}
-
-{{--<div id="id01" class="modal">--}}
-
-    {{--<div class="panel-body">--}}
-        {{--@if (session('status'))--}}
-            {{--<div class="alert alert-success">--}}
-                {{--{{ session('status') }}--}}
-            {{--</div>--}}
-        {{--@endif--}}
-
-            {{--<form class="modal-content animate"  role="form" method="POST" action="{{ route('password.request') }}">--}}
-        {{--{{ csrf_field() }}--}}
-
-        {{--<div class="container">--}}
-            {{--<input type="hidden" name="token" value="{{ $token }}">--}}
-            {{--<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">--}}
-
-                {{--<div class="col-md-6">--}}
-                    {{--<label for="email"><b>E-Mail Address</b></label>--}}
-                    {{--<input id="email" type="text" placeholder="Enter e-mail" name="email" value="{{ $email or old('email') }}" required autofocus>--}}
-
-                    {{--@if ($errors->has('email'))--}}
-                        {{--<span class="help-block">--}}
-                                        {{--<strong>{{ $errors->first('email') }}</strong>--}}
-                                    {{--</span>--}}
-                    {{--@endif--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">--}}
-
-                {{--<div class="col-md-6">--}}
-                    {{--<label for="password"><b>Password</b></label>--}}
-                    {{--<input id="password" type="password" placeholder="Enter new password" name="password" required>--}}
-
-                    {{--@if ($errors->has('password'))--}}
-                        {{--<span class="help-block">--}}
-                                        {{--<strong>{{ $errors->first('password') }}</strong>--}}
-                                    {{--</span>--}}
-                    {{--@endif--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-
-            {{--<div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">--}}
-                {{--<label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>--}}
-                {{--<div class="col-md-6">--}}
-                    {{--<input id="password-confirm" type="password" placeholder="Confirm your password" name="password_confirmation" required>--}}
-
-                    {{--@if ($errors->has('password_confirmation'))--}}
-                        {{--<span class="help-block">--}}
-                                        {{--<strong>{{ $errors->first('password_confirmation') }}</strong>--}}
-                                    {{--</span>--}}
-                    {{--@endif--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
-            {{--<button type="submit">Login</button>--}}
-            {{--<input type="checkbox" checked="checked" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember me--}}
-        {{--</div>--}}
-
-        {{--<div class="container" style="background-color:#f1f1f1">--}}
-            {{--<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>--}}
-            {{--<span class="psw">Confirm Changes <a href="{{ route('password.request') }}">password?</a></span>--}}
-        {{--</div>--}}
-    {{--</form>--}}
-{{--</div>--}}
-
-
-{{--<!-- Scripts -->--}}
-{{--<script src="{{ asset('js/login.js') }}"></script>--}}
-
-{{--</body>--}}
-{{--</html>--}}
 

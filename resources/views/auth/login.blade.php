@@ -1,14 +1,7 @@
 
 <!DOCTYPE html>
 <head>
-    <!-- templatemo 418 form pack -->
-    <!--
-    Form Pack
-    http://www.templatemo.com/preview/templatemo_418_form_pack
-    -->
     <title>Login One</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
@@ -21,40 +14,64 @@
 <div class="container">
     <div class="col-md-12">
         <h1 class="margin-bottom-15">Login Form One</h1>
-        <form class="form-horizontal templatemo-container templatemo-login-form-1 margin-bottom-30" role="form" action="#" method="post">
+        <form class="form-horizontal templatemo-container templatemo-login-form-1 margin-bottom-30" role="form" action="{{ route('login') }}" method="post">
+            {{ csrf_field() }}
+
+
             <div class="form-group">
                 <div class="col-xs-12">
                     <div class="control-wrapper">
-                        <label for="username" class="control-label fa-label"><i class="fa fa-user fa-medium"></i></label>
-                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <label for="email" class="control-label fa-label"><i class="fa fa-user fa-medium"></i></label>
+                        <input type="text" class="form-control" id="email" placeholder="Enter e-mail"  name="email" value="{{ old('email') }}" required autofocus>
+
+                        @if ($errors->has('email'))
+                            <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                        @endif
+
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+
+            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                 <div class="col-md-12">
                     <div class="control-wrapper">
                         <label for="password" class="control-label fa-label"><i class="fa fa-lock fa-medium"></i></label>
-                        <input type="password" class="form-control" id="password" placeholder="Password">
+                        <input type="password" class="form-control" id="password" placeholder="Password" name="password" required>
+
+                        @if ($errors->has('password'))
+                            <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                        @endif
                     </div>
                 </div>
             </div>
+
             <div class="form-group">
                 <div class="col-md-12">
                     <div class="checkbox control-wrapper">
                         <label>
-                            <input type="checkbox"> Remember me
+                            <input type="checkbox" checked="checked" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember me
                         </label>
                     </div>
                 </div>
             </div>
-            <div class="form-group">
+
+
+
+
+
+    <div class="form-group">
                 <div class="col-md-12">
                     <div class="control-wrapper">
                         <input type="submit" value="Log in" class="btn btn-info">
-                        <a href="forgot-password.html" class="text-right pull-right">Forgot password?</a>
+                        <a href="{{ route('password.request') }}" class="text-right pull-right">Forgot password?</a>
                     </div>
                 </div>
             </div>
+
             <hr>
             <div class="form-group">
                 <div class="col-md-12">
@@ -97,6 +114,7 @@
 
     {{--<form class="modal-content animate"  role="form" method="POST" action="{{ route('login') }}">--}}
         {{--{{ csrf_field() }}--}}
+
         {{--<div class="imgcontainer">--}}
             {{--<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>--}}
             {{--<img src="img_avatar2.png" alt="Avatar" class="avatar">--}}
