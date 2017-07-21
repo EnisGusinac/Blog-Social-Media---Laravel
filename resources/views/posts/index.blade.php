@@ -15,8 +15,8 @@
                     <a href="/posts/{{ $post->id }}" class="w3-bar-item w3-button"> Read more</a>
                     <a href="/posts/{{ $post->id }}/edit" class="w3-bar-item w3-button"> Edit post</a>
                     <button type="submit" class="w3-bar-item w3-button">
-                       {{ csrf_field() }}
-                       {{ method_field('DELETE') }}
+                        {{ method_field('DELETE') }}
+                        {{ csrf_field() }}
 
                     Delete post</button>
 
