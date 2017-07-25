@@ -135,68 +135,19 @@
     <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-    <p>Find me on social media.</p>
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+{{--<footer class="w3-container w3-teal w3-center w3-margin-top">--}}
+    {{--<p>Find me on social media.</p>--}}
+    {{--<i class="fa fa-facebook-official w3-hover-opacity"></i>--}}
+    {{--<i class="fa fa-instagram w3-hover-opacity"></i>--}}
+    {{--<i class="fa fa-snapchat w3-hover-opacity"></i>--}}
+    {{--<i class="fa fa-pinterest-p w3-hover-opacity"></i>--}}
+    {{--<i class="fa fa-twitter w3-hover-opacity"></i>--}}
+    {{--<i class="fa fa-linkedin w3-hover-opacity"></i>--}}
+    {{--<p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>--}}
+{{--</footer>--}}
+
+@extends('layouts.footer')
+
 
 </body>
 </html>
-
-{{--<header class="w3-container w3-blue w3-padding-24">--}}
-    {{--<h1>{{ $user->name }}</h1>--}}
-{{--</header>--}}
-
-{{--<div class="w3-container">--}}
-    {{--<img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle">--}}
-    {{--<h2>{{ $user->name }}'s Profile</h2>--}}
-    {{--<h5>Email: {{ $user->email }}</h5>--}}
-    {{--<h5>Birthdate: {{ $user->dob->format('l j F Y') }} ({{$user->dob->age }} years old)</h5>--}}
-    {{--<h5>Joined: {{ $user->created_at->format('l j F Y') }} </h5>--}}
-    {{--<h5>Last update: {{ $user->updated_at->format('g:ia \o\n l jS F Y') }} </h5>--}}
-
-    {{--<form enctype="multipart/form-data" action="/profile" method="POST">--}}
-        {{--<label for="">Update Profile Image</label>--}}
-        {{--<input type="file" name="avatar">--}}
-        {{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
-        {{--<input type="submit" class="pull-right btn btn-sm btn-primary">--}}
-    {{--</form>--}}
-{{--</div>--}}
-
-{{--<footer class="w3-container w3-blue">--}}
-
-    {{--<button class="w3-button w3-block w3-dark-grey">+ Connect</button>--}}
-{{--</footer>--}}
-
-
-{{--<style type="text/css">--}}
-    {{--.profile-img {--}}
-        {{--max-width: 150px;--}}
-        {{--float: left;--}}
-        {{--margin-right: 25px;--}}
-        {{--border: 5px solid @fff;--}}
-        {{--border-radius: 100%;--}}
-        {{--box-shadow: 0 2px 2px rgba(0,0,0, 0.3);--}}
-    {{--}--}}
-
-{{--<div class="w3-container">--}}
-{{--<img class="profile-img" src="/uploads/avatars/{{ $user->avatar }}" alt="Avatar" class="w3-left w3-circle">--}}
-{{--<h2>{{ $user->name }}'s Profile</h2>--}}
-{{--<h5>Email: {{ $user->email }}</h5>--}}
-{{--<h5>Birthdate: {{ $user->dob->format('l j F Y') }} ({{$user->dob->age }} years old)</h5>--}}
-{{--<h5>Joined: {{ $user->created_at->format('l j F Y') }} </h5>--}}
-{{--<h5>Last update: {{ $user->updated_at->format('g:ia \o\n l jS F Y') }} </h5>--}}
-
-{{--<form enctype="multipart/form-data" action="/profile" method="POST">--}}
-{{--<label for="">Update Profile Image</label>--}}
-{{--<input type="file" name="avatar">--}}
-{{--<input type="hidden" name="_token" value="{{ csrf_token() }}">--}}
-{{--<input type="submit" class="pull-right btn btn-sm btn-primary">--}}
-{{--</form>--}}
-{{--</div>--}}
